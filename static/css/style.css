@@ -166,14 +166,14 @@ label {
 .fail-message {
     border: 1px dashed #f44336 !important;
     background-color: #ef9a9a !important;
-    border-radius: 30px !important;
+    border-radius: 40px !important;
     color: #000;
 }
 
 .success-message {
     border: 1px dashed #4caf50 !important;
     background-color: #a5d6a7 !important;
-    border-radius: 30px !important;
+    border-radius: 40px !important;
     color: #000;
 }
 
@@ -181,21 +181,21 @@ label {
 /* NAVBAR SECTION STYLES */
 /* ****************************************************************************************************************** */
 .navbar {
-    width: 150vw !important;
+    width: 100vw !important;
     height: 60px !important;
-    border: 1px solid gray;
+    border: 3px solid gray;
     background-color: #c4b459;
 }
 
 .navbar-collection {
     display: flex;
-    width: 450px;
+    width: 300px;
     margin-left: calc(50% - 225px);
 }
 
 .navbar-item {
     width: 150px;
-    text-align: center;
+    text-align: left;
     height: auto !important;
     padding: 5px !important;
     transition: all 0.2s ease-in;
@@ -350,7 +350,7 @@ label {
 .navbar-automaton-item:hover {
     cursor: pointer;
     margin-top: -16px !important;
-    border-bottom: 2px solid #4caf50;
+    border-bottom: 2px solid #a18e3a;
 }
 
 .navbar-automaton-item:active {
