@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col l4 automaton-options">
         <div class="automaton-input-container">
-            <p class="flow-text center-align form-title">CREACION DE AUTOMATAS</p>
+            <p class="flow-text center-align form-title">Formulario</p>
             <hr>
             <form class="automaton-form" id="automatonForm">
                 <div class="row">
@@ -15,11 +15,11 @@
                     </div>
                     <div class="col s3">
                         <input class="validate" type="text" id="initialInput" name="initialInput" placeholder="A">
-                        <label class="" for="initialInput">Est. Inicial</label>
+                        <label class="" for="initialInput">Inicial</label>
                     </div>
                     <div class="col s3">
                         <input class="validate" type="text" id="finalInput" name="finalInput" placeholder="B, C">
-                        <label class="" for="finalInput">Est. Aceptación</label>
+                        <label class="" for="finalInput">Final</label>
                     </div>
                 </div>
                 <div class="row">
@@ -31,16 +31,16 @@
                     <div class="col s3">
                         <input class="validate" type="text" id="transitionSymbolInput" name="transitionInput"
                                placeholder="0">
-                        <label class="" for="transitionSymbolInput">Símbolo de entrada</label>
+                        <label class="" for="transitionSymbolInput">Símbolo</label>
                     </div>
                     <div class="col s3">
                         <input class="validate" type="text" id="transitionTargetInput" name="transitionInput"
                                placeholder="C,D">
-                        <label class="" for="transitionTargetInput">Resultado</label>
+                        <label class="" for="transitionTargetInput">Objetivo</label>
                     </div>
                     <div class="col s3">
                         <button class="btn btn-primary btn-add-transition hoverable" id="btnAddTransition">
-                            <i class="material-icons">ADD</i>
+                            <i class="material-icons">add</i>
                         </button>
                     </div>
                 </div>
@@ -48,30 +48,43 @@
                 <table>
                     <thead>
                     <tr>
-                        <th>Estado actual</th>
-                        <th>Símbolo de entrada</th>
-                        <th>Trancision</th>
+                        <th>Estado</th>
+                        <th>Símbolo</th>
+                        <th>Objetivo</th>
                     </tr>
                     </thead>
                     <tbody id="transitionsList"></tbody>
                 </table>
 
                 <div class="center-align">
-                    <p class="flow-text center-align form-title">OPERACIONES DE AUTOMATAS</p>
                     <button class="btn btn-danger btn-create-automaton hoverable" id="btnClearAutomaton">
                         Limpiar
                     </button>
                     <button class="btn btn-primary btn-create-automaton hoverable" id="btnCreateAutomaton">
                         Crear autómata
                     </button>
-                   <!-- <button class="btn btn-primay btn-verify-automaton hoverable" id="btnVerifyAutomaton">
-                        Verificar
-                    </button>  -->         
                 </div>
+
                 <div class="automaton-form-info" id="automatonFormInfo"></div>
             </form>
 
-           
+            <!-- Start regex form -->
+            <form class="regex-form" id="regexForm">
+                <div class="">
+                    <input class="validate" type="text" id="regexInput" name="regexInput" placeholder="(a|b)*c">
+                    <label class="" for="regexInput">Expresión regular</label>
+                </div>
+                <div class="center-align">
+                    <button class="btn btn-primary btn-create-automaton hoverable" id="btnGenerateAutomaton">
+                        Generar autómata
+                    </button>
+                </div>
+
+                <div class="regex-form-info" id="regexFormInfo"></div>
+            </form>
+            <!-- End regex form -->
+        </div>
+
         <div class="matcher-opener center-align">
             <button class="btn btn-primary hoverable" id="btnMatcherOpener"> Comprobar cadena
                 <i class="material-icons right">keyboard_arrow_up</i>
@@ -125,7 +138,7 @@
                     <img class="responsive-img" src="./../static/img/dfa.png" alt="Automaton Example Image">
                     <hr>
                     <p>
-                        <b>Autómata Finito Deterministico</b> que reconoce el lenguaje regular conformado exclusivamente
+                        <b>Autómata Finito Determinista</b> que reconoce el lenguaje regular conformado exclusivamente
                         por las cadenas con un número par de ceros y par de unos.
                     </p>
                 </div>
@@ -156,9 +169,9 @@
                 <table class="highlight striped centered">
                     <thead>
                     <tr>
-                        <th>Estado actual</th>
-                        <th>Símbolo entrada</th>
-                        <th>Nuevo Estado</th>
+                        <th>Estado</th>
+                        <th>Símbolo</th>
+                        <th>Objetivo</th>
                     </tr>
                     </thead>
                     <tbody id="detailAutomatonTransitions"></tbody>
