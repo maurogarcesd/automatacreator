@@ -113,7 +113,9 @@
         <div class="automaton-solution-info" id="automatonSolutionInfo">
             <p class="flow-text automaton-solution-info-title">Autómata Finito</p>
             <hr>
-               <p class="automaton-solution-info-text">
+            <div class="row">
+                <div class="col s12 l8">
+                    <p class="automaton-solution-info-text">
                         Un <b>autómata finito</b> (AF) o máquina de estado finito es un modelo computacional que realiza
                         cómputos en forma automática sobre una entrada para producir una salida. <br>
 
@@ -131,14 +133,22 @@
                         NuevoEstado = f(estadoActual, símboloDeEntrada)
 
                         
-                </p>
-                
-                
+                    </p>
+                </div>
+                <div class="col s12 l4 automaton-solution-info-image-side">
+                    <img class="responsive-img" src="./../static/img/dfa.png" alt="Automaton Example Image">
+                    <hr>
+                    <p>
+                        <b>Autómata Finito Determinista</b> que reconoce el lenguaje regular conformado exclusivamente
+                        por las cadenas con un número par de ceros y par de unos.
+                    </p>
+                </div>
+
                 <div class="container-loader" id="loader">
                     <div class="preload"></div>
                 </div>
             </div>
-    </div>
+        </div>
 
         <div class="automaton-solution-response" id="automatonSolutionResponse">
             <div class="navbar-automaton">
