@@ -1,2 +1,2 @@
-# automatacreator
-Creacion de Automatas Finitos
+# finite_automaton
+

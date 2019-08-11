@@ -1,0 +1,176 @@
+<div class="about-container">
+    <div class="container">
+        <h1>Automaton</h1>
+        <hr>
+        <p class="about-text">
+            Automaton es una aplicación desarrollada con el fin de acercar a diversos tipos de usuarios al mundo de los
+            autómatas finitos <b>(AF)</b>, tanto deterministas <b>(AFD)</b> como no deterministas <b>(AFND)</b>.
+            Además, Automaton ofrece la posibilidad de trabajar con expresiones regulares <b>ER</b> basados en los
+            teoremas expuestos en 1968 por <a href="https://en.wikipedia.org/wiki/Ken_Thompson">Ken Thompson</a>, en los
+            cuales expone el proceso de conversión de una <b>ER</b> a un <b>AFND</b> haciendo uso de las
+            <a href="https://en.wikipedia.org/wiki/Thompson%27s_construction">construcciones básicas de Thompson</a>.
+            <br>
+
+            Las operaciones que se pueden realizar haciendo uso de Automaton son:
+
+        </p>
+        <ul class="about-text">
+            <li>> Creación de AFD</li>
+            <li>> Creación de AFND</li>
+            <li>> Conversión de AFND a AFD</li>
+            <li>> Conversión de ER a AFD</li>
+            <li>> Evaluación de cadenas en AFD</li>
+        </ul>
+
+        <h2>Guía de usuario</h2>
+        <hr>
+        <p class="about-text">
+            Automaton cuenta con dos secciones principales (Autómatas y Regex) entre las cuales se reparten las
+            funcionalidades anteriormente mencionadas, en la sección de automatas el usuario podrá crear, visualizar y
+            comprobar autómatas finitos deterministas y no deterministas, mientras que en la sección de regex podrá
+            generar autómatas finitos a partir de una <b>ER</b> ingresada, además, visualizar su respectiva
+            información y comprobar una hileras de símbolos. <br><br> A continuación se presentan los páneles de
+            opciones de las dos secciones.
+        </p>
+
+        <div class="row">
+            <div class="col s12 l6">
+                <div class="user-options-container center-align">
+                    <img class="responsive-img user-options-image center"
+                         src="./../static/img/about/automaton_options1.png" alt="automaton options">
+                    <hr>
+                    <div class="user-options-description">
+                        <h2 class="">Opciones de Autómata</h2>
+                        <hr>
+                        <p>
+                            Contiene el formulario de creación de <b>AFD</b> y <b>AFND</b> y el formulario de
+                            comprobación de hileras
+                            de símbolos. <br> (Para <b>AFND</b> separar estados objetivo por coma).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 l6">
+                <div class="user-options-container center-align">
+                    <img class="responsive-img user-options-image center"
+                         src="./../static/img/about/regex_options.png" alt="regex options">
+                    <hr>
+                    <div class="user-options-description">
+                        <h2 class="">Opciones de Regex</h2>
+                        <hr>
+                        <p>
+                            Contiene el formulario de generación de <b>AFD</b> a partir de expresiones regulares y el
+                            formulario de comprobación de hileras de símbolos dada una <b>ER</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 l7">
+                <p class="about-text">
+                    De manera similar presentamos el área de visualización de resultados, en la cual el usuario podrá
+                    interactuar y analizar los resultados obtenidos después de crear un <b>AFD</b>, <b>AFND</b> o
+                    de generar un <b>AFD</b> a partir de una <b>ER</b>. <br> De antemano es importante mencionar que el
+                    área de resultados es compartida por las secciones Autómata y Regex, lo anterior se debe a que
+                    los resultados obtenidos tras llevar a cabo una de las operaciones anteriores siempre será un
+                    <b>AFD</b> mínimo y simplificado. <br>
+                    Las siguientes imágenes corresponden a la información del autómata creado a partir de la
+                    configuración mostrada en el <i>autómata A1</i>.
+                </p>
+            </div>
+            <div class="col s12 l5">
+                <img class="responsive-img " src="./../static/img/about/automaton_info.png"
+                     alt="Automaton example">
+
+                <p class="center-align"><i>Autómata A1</i></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 l9">
+                <img class="responsive-img about-graph-image  "
+                     src="./../static/img/about/automaton_graph.png"
+                     alt="graph image">
+            </div>
+            <div class="col s12 l3">
+                <p><i>Figura 1</i></p>
+                <hr>
+                <p>
+                    <i>Máquina de estados generada a partir del autómata A1.</i> <br><br>
+                    En el diagrama anterior observamos un conjunto de estados y sus transiciones
+                    dado un símbolo de entrada. El estado de color azul representa el estado inicial del autómata,
+                    el estado(o los posibles estados) de color verde representan los estados de aceptación
+                    del autómata. <b>Nota: </b> en caso de que un estado sea a su vez inicial y de aceptación el estado
+                    será coloreado con un color azul oscuro.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 l3 right-align">
+                <p><i>Figura 2</i></p>
+                <hr>
+                <p>
+                    <i>Información detallada del autómata A1.</i> <br><br>
+                    En la sección detalles del área de visualización podemos encontrar la información de manera más
+                    organizada para el automata generado, en esta sección podemos observar los estados, los símbolos,
+                    el estado inicial, los estados finales (de aceptación) y las transiciones para cada uno de los
+                    estados con cada uno de los posibles símbolos.
+                </p>
+            </div>
+            <div class="col s12 l9">
+                <img class="responsive-img about-graph-image  "
+                     src="./../static/img/about/automaton_details.png"
+                     alt="details image">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 l9">
+                <img class="responsive-img about-graph-image  "
+                     src="./../static/img/about/automaton_script.png"
+                     alt="Script image">
+            </div>
+            <div class="col s12 l3">
+                <p><i>Figura 3</i></p>
+                <hr>
+                <p>
+                    <i>Algoritmo obtenido a partir de la máquina de estados.</i> <br><br>
+                    En el lado izquierdo de la sección código del área de visualización el usuario podrá encontrar
+                    un script en el lenguaje de programación <b>python 3</b> el cual puede ser utilizado para evaluar
+                    el <b>AFD</b> creado o generado; además, en el lado derecho encontrará instrucciones de cómo
+                    ejecutar el script generado y un botón desde el cual se puede realizar la descarga del mismo.
+                </p>
+            </div>
+        </div>
+
+        <h2>Creando y evaluando AFD</h2>
+        <hr>
+        <p class="about-text">
+            A continuación se muestran dos vídeos explicativos en los cuales el usuario podrá apreciar el proceso de
+            creación y evaluación de un autómata. En primer lugar se mestran los pasos para crear un <b>AFND</b>,
+            y posteriormente evaluarlo, y en segundo lugar se muestran los pasos para generar un <b>AFD</b> apartir
+            de una <b>ER</b> y se realiza una evaluación de una hilera de símbolos como en el primer caso.
+        </p>
+
+        <img class="responsive-img about-graph-image  "
+             src="./../static/img/about/nfa.gif"
+             alt="Script image">
+        <p class="center-align"><i>Video 1: Creación de <b>AFND</b></i></p>
+
+        <br><br>
+
+        <img class="responsive-img about-graph-image  "
+             src="./../static/img/about/re.gif"
+             alt="Script image">
+        <p class="center-align"><i>Video 2: Generación de <b>AFND</b> apartir de <b>ER</b></i></p>
+
+        <div class="footer center-align">
+            <hr>
+            <p class="flow-text">Developed with love &hearts;</p>
+            <p class="year-text">2019 Medellín Colombia</p>
+        </div>
+    </div>
+</div>

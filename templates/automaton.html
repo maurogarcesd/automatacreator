@@ -1,0 +1,211 @@
+<div class="row">
+    <div class="col l4 automaton-options">
+        <div class="automaton-input-container">
+            <p class="flow-text center-align form-title">Formulario</p>
+            <hr>
+            <form class="automaton-form" id="automatonForm">
+                <div class="row">
+                    <div class="col s3">
+                        <input class="validate" type="text" id="statesInput" name="statesInput" placeholder="A, B, C">
+                        <label class="" for="statesInput">Estados</label>
+                    </div>
+                    <div class="col s3">
+                        <input class="validate" type="text" id="symbolsInput" name="symbolsInput" placeholder="0, 1, 2">
+                        <label class="" for="symbolsInput">Símbolos</label>
+                    </div>
+                    <div class="col s3">
+                        <input class="validate" type="text" id="initialInput" name="initialInput" placeholder="A">
+                        <label class="" for="initialInput">Inicial</label>
+                    </div>
+                    <div class="col s3">
+                        <input class="validate" type="text" id="finalInput" name="finalInput" placeholder="B, C">
+                        <label class="" for="finalInput">Final</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        <input class="validate" type="text" id="transitionStateInput" name="transitionInput"
+                               placeholder="A">
+                        <label class="" for="transitionStateInput">Estado</label>
+                    </div>
+                    <div class="col s3">
+                        <input class="validate" type="text" id="transitionSymbolInput" name="transitionInput"
+                               placeholder="0">
+                        <label class="" for="transitionSymbolInput">Símbolo</label>
+                    </div>
+                    <div class="col s3">
+                        <input class="validate" type="text" id="transitionTargetInput" name="transitionInput"
+                               placeholder="C,D">
+                        <label class="" for="transitionTargetInput">Objetivo</label>
+                    </div>
+                    <div class="col s3">
+                        <button class="btn btn-primary btn-add-transition hoverable" id="btnAddTransition">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Estado</th>
+                        <th>Símbolo</th>
+                        <th>Objetivo</th>
+                    </tr>
+                    </thead>
+                    <tbody id="transitionsList"></tbody>
+                </table>
+
+                <div class="center-align">
+                    <button class="btn btn-danger btn-create-automaton hoverable" id="btnClearAutomaton">
+                        Limpiar
+                    </button>
+                    <button class="btn btn-primary btn-create-automaton hoverable" id="btnCreateAutomaton">
+                        Crear autómata
+                    </button>
+                </div>
+
+                <div class="automaton-form-info" id="automatonFormInfo"></div>
+            </form>
+
+            <!-- Start regex form -->
+            <form class="regex-form" id="regexForm">
+                <div class="">
+                    <input class="validate" type="text" id="regexInput" name="regexInput" placeholder="(a|b)*c">
+                    <label class="" for="regexInput">Expresión regular</label>
+                </div>
+                <div class="center-align">
+                    <button class="btn btn-primary btn-create-automaton hoverable" id="btnGenerateAutomaton">
+                        Generar autómata
+                    </button>
+                </div>
+
+                <div class="regex-form-info" id="regexFormInfo"></div>
+            </form>
+            <!-- End regex form -->
+        </div>
+
+        <div class="matcher-opener center-align">
+            <button class="btn btn-primary hoverable" id="btnMatcherOpener"> Comprobar cadena
+                <i class="material-icons right">keyboard_arrow_up</i>
+            </button>
+        </div>
+
+        <div class="matcher-container" id="matcherContainer">
+            <a class="right" id="btnMatcherCloser"><i class="material-icons close-icon-form">close</i></a>
+            <form id="automatonMatcherForm" class="automaton-matcher-form">
+                <div class="">
+                    <input id="stringInput" type="text" class="validate">
+                    <label class="" for="stringInput">Cadena a comprobar</label>
+                </div>
+                <div class="center-align match-loader-container">
+                    <div class="progress" id="matchLoader">
+                        <div class="indeterminate"></div>
+                    </div>
+                </div>
+                <div class="center-align">
+                    <button class="btn btn-primary btn-match" id="btnMatchString" type="submit">Verificar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col l8 automaton-solution-container" id="automatonSolutionContainer">
+        <div class="automaton-solution-info" id="automatonSolutionInfo">
+            <p class="flow-text automaton-solution-info-title">Autómata Finito</p>
+            <hr>
+            <div class="row">
+                <div class="col s12 l8">
+                    <p class="automaton-solution-info-text">
+                        Un <b>autómata finito</b> (AF) o máquina de estado finito es un modelo computacional que realiza
+                        cómputos en forma automática sobre una entrada para producir una salida. <br>
+
+                        Este modelo está conformado por un alfabeto, un conjunto de estados finito, una función de
+                        transición, un estado inicial y un conjunto de estados finales. Su funcionamiento se basa en una
+                        función de transición, que recibe a partir de un estado inicial una cadena de caracteres
+                        pertenecientes alalfabeto (la entrada), y que va leyendo dicha cadena a medida que el autómata
+                        se desplaza de un estado a otro, para finalmente detenerse en un estado final o de aceptación,
+                        que representa la salida.<br>
+
+                        La finalidad de los autómatas finitos es la de reconocer lenguajes regulares, que corresponden a
+                        los lenguajes formales más simples según la Jerarquía de Chomsky. <br><br>
+
+                        Para saber más visita
+                        <a href="https://es.wikipedia.org/wiki/Aut%C3%B3mata_finito" target="_blank">Wikipedia</a>
+                    </p>
+                </div>
+                <div class="col s12 l4 automaton-solution-info-image-side">
+                    <img class="responsive-img" src="./../static/img/dfa.png" alt="Automaton Example Image">
+                    <hr>
+                    <p>
+                        <b>Autómata Finito Determinista</b> que reconoce el lenguaje regular conformado exclusivamente
+                        por las cadenas con un número par de ceros y par de unos.
+                    </p>
+                </div>
+
+                <div class="container-loader" id="loader">
+                    <div class="preload"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="automaton-solution-response" id="automatonSolutionResponse">
+            <div class="navbar-automaton">
+                <ul class="navbar-automaton-collection">
+                    <li class="navbar-automaton-item" id="graphAutomatonLink">GRÁFICO</li>
+                    <li class="navbar-automaton-item" id="jsonAutomatonLink">DETALLES</li>
+                    <li class="navbar-automaton-item" id="codeAutomatonLink">CÓDIGO</li>
+                </ul>
+            </div>
+            <div class="automaton-graph" id="graphAutomatonContainer"></div>
+            <div class="automaton-details" id="detailsAutomatonContainer">
+                <ul class="collection">
+                    <li class="collection-item" id="detailAutomatonStates"></li>
+                    <li class="collection-item" id="detailAutomatonSymbols"></li>
+                    <li class="collection-item" id="detailAutomatonInitial"></li>
+                    <li class="collection-item" id="detailAutomatonFinal"></li>
+                </ul>
+
+                <table class="highlight striped centered">
+                    <thead>
+                    <tr>
+                        <th>Estado</th>
+                        <th>Símbolo</th>
+                        <th>Objetivo</th>
+                    </tr>
+                    </thead>
+                    <tbody id="detailAutomatonTransitions"></tbody>
+                </table>
+            </div>
+            <div id="codeAutomatonContainer">
+                <div class="row">
+                    <div class="col s12 l8 code-automaton-container">
+                        <pre class="automaton-code" id="codeAutomaton"></pre>
+                    </div>
+                    <div class="col s12 l4">
+                        <div class="automaton-code-info">
+                            <p class="automaton-code-info-text">
+                                El script presentado corresponde a una simple implementación en el lenguaje de
+                                programación <b>python</b>. <br> Dicho script puede ser descargado y ejecutado en
+                                cualquier sistema que disponga de un intérprete de python, o bien en un intérprete
+                                online tal como <a href="https://www.onlinegdb.com/online_python_interpreter"
+                                                   target="_blank">onlineGDB</a>. <br>
+                                Para ejecutar el código desde una terminal en linux por favor siga estos pasos:
+                            </p>
+                            <code>
+                                $ cd /ruta/archivo/ <br>
+                                $ python3 automaton.py <br>
+                                $ Ingrese la cadena >> abc <br>
+                                $ True
+                            </code>
+                        </div>
+                        <hr>
+                        <div class="center-align">
+                            <button class="btn btn-primary hoverable" id="btnDownloadScript">Descargar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

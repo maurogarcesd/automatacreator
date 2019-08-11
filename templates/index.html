@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>automaton</title>
+
+    <link rel="shortcut icon" href="./../static/img/icon.png" type="image/x-icon">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="./../static/css/materialize.css">
+    <link rel="stylesheet" href="./../static/css/icons.css">
+    <link rel="stylesheet" href="./../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/rainbow.min.css">
+    <link rel="stylesheet" href="./../static/css/vis.min.css">
+
+    <script src="./../static/js/vis.min.js"></script>
+</head>
+
+<body>
+<div class="navbar">
+    <div class="row">
+        <ul class="navbar-collection">
+            <li class="navbar-item" id="autoamatonLink">AUTÓMATAS</li>
+           </ul>
+    </div>
+</div>
+
+<div id="automatonContainer" class="automaton-container">
+    {% include "automaton.html" %}
+</div>
+
+<div id="aboutContainer" class="about-container">
+    {% include "about.html" %}
+</div>
+
+<!-- Javascript files -->
+<script src="./../static/js/jquery.js"></script>
+<script src="../static/js/materialize.min.js"></script>
+<script src="../static/js/events.js"></script>
+<script src="./../static/js/automaton.js"></script>
+<script src="../static/js/utils.js"></script>
+</body>
+
+</html>
