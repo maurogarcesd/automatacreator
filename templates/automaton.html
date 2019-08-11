@@ -63,28 +63,15 @@
                     <button class="btn btn-primary btn-create-automaton hoverable" id="btnCreateAutomaton">
                         Crear autómata
                     </button>
+                    <button class="btn btn-primary btn-verify-automaton hoverable" id="btnVerifyAutomaton">
+                        Verificar autómata
+                    </button>
                 </div>
 
                 <div class="automaton-form-info" id="automatonFormInfo"></div>
             </form>
 
-            <!-- Start regex form -->
-            <form class="regex-form" id="regexForm">
-                <div class="">
-                    <input class="validate" type="text" id="regexInput" name="regexInput" placeholder="(a|b)*c">
-                    <label class="" for="regexInput">Expresión regular</label>
-                </div>
-                <div class="center-align">
-                    <button class="btn btn-primary btn-create-automaton hoverable" id="btnGenerateAutomaton">
-                        Generar autómata
-                    </button>
-                </div>
-
-                <div class="regex-form-info" id="regexFormInfo"></div>
-            </form>
-            <!-- End regex form -->
-        </div>
-
+           
         <div class="matcher-opener center-align">
             <button class="btn btn-primary hoverable" id="btnMatcherOpener"> Comprobar cadena
                 <i class="material-icons right">keyboard_arrow_up</i>
@@ -169,9 +156,9 @@
                 <table class="highlight striped centered">
                     <thead>
                     <tr>
-                        <th>Estado</th>
-                        <th>Símbolo</th>
-                        <th>Objetivo</th>
+                        <th>Estado actual</th>
+                        <th>Símbolo entrada</th>
+                        <th>Nuevo Estado</th>
                     </tr>
                     </thead>
                     <tbody id="detailAutomatonTransitions"></tbody>
