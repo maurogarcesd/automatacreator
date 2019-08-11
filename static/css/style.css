@@ -182,7 +182,7 @@ label {
 /* ****************************************************************************************************************** */
 .navbar {
     width: 100vw !important;
-    height: 60px !important;
+    height: 100px !important;
     border: 3px solid gray;
     background-color: #c4b459;
 }
@@ -210,7 +210,7 @@ label {
 .brand-text {
     margin-top: 0 !important;
     font-style: italic;
-    color: #4caf50;
+    color: #a59820;
     font-size: 2.5rem;
     text-shadow: 2px 2px 2px black;
 }
@@ -331,7 +331,7 @@ label {
 .navbar-automaton {
     margin-top: -20px !important;
     width: 100% !important;
-    height: 60px !important;
+    height: 80px !important;
 }
 
 .navbar-automaton-collection {
@@ -341,7 +341,7 @@ label {
 .navbar-automaton-item {
     width: 33%;
     text-align: center;
-    height: 60px !important;
+    height: 40px !important;
     margin-top: -16px !important;
     transition: all 0.2s ease-in;
     padding: 20px !important;
