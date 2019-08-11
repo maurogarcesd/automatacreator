@@ -149,7 +149,14 @@
     border: 1px dashed #f44336;
     border-radius: 30px !important;
 }
-
+.btn-sec {
+    color: #000;
+    width: auto;
+    height: 35px;
+    background-color: #ef9a9a;
+    border: 1px dashed #f44336;
+    border-radius: 30px !important;
+}
 .form-loader {
     background-color: #9fa8da !important;
 }

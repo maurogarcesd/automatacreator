@@ -10,6 +10,7 @@ $(document).ready(() => {
     let transitions = [];
     let btnAddTransition = $("#btnAddTransition");
     let btnCreateAutomaton = $("#btnCreateAutomaton");
+    let btnVerifyAutomaton = $("#btnVerifyAutomaton");
     let btnClearAutomaton = $("#btnClearAutomaton");
 
     let regexInput = $("#regexInput");
@@ -172,5 +173,9 @@ $(document).ready(() => {
         event.preventDefault();
         downloadScript();
     });
+    btnVerifyAutomaton.click((event) => {
+        event.preventDefault();
+        showAutomatonSolutionInfo();
+        failMessage("ESTA FUNCION NO ESTA DISPONIBLE AUN SERVIRA PARA CONVERTIR AFND EN AFD");    });
 });
 
